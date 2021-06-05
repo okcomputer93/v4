@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { navLinks } from '@config';
 import { KEY_CODES } from '@utils';
 import { useOnClickOutside } from '@hooks';
+import { useTranslation } from 'react-i18next';
 
 const StyledMenu = styled.div`
   display: none;
@@ -160,6 +161,8 @@ const Menu = () => {
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
+  const { t } = useTranslation();
+
   const buttonRef = useRef(null);
   const navRef = useRef(null);
 
@@ -259,7 +262,7 @@ const Menu = () => {
                 {navLinks.map(({ url, name }, i) => (
                   <li key={i}>
                     <Link to={url} onClick={() => setMenuOpen(false)}>
-                      {name}
+                      {t(name)}
                     </Link>
                   </li>
                 ))}

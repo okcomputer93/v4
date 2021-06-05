@@ -8,6 +8,7 @@ import { loaderDelay } from '@utils';
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks';
 import { Menu } from '@components';
 import { IconLogo } from '@components/icons';
+import { useTranslation } from 'react-i18next';
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -132,6 +133,7 @@ const Nav = ({ isHome }) => {
   const scrollDirection = useScrollDirection('down');
   const [scrolledToTop, setScrolledToTop] = useState(true);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const { t } = useTranslation();
 
   const handleScroll = () => {
     setScrolledToTop(window.pageYOffset < 50);
@@ -174,7 +176,7 @@ const Nav = ({ isHome }) => {
 
   const ResumeLink = (
     <a className="resume-button" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-      Resume
+      {t('resume')}
     </a>
   );
 
@@ -190,7 +192,7 @@ const Nav = ({ isHome }) => {
                 {navLinks &&
                   navLinks.map(({ url, name }, i) => (
                     <li key={i}>
-                      <Link to={url}>{name}</Link>
+                      <Link to={url}>{t(name)}</Link>
                     </li>
                   ))}
               </ol>
@@ -217,7 +219,7 @@ const Nav = ({ isHome }) => {
                     navLinks.map(({ url, name }, i) => (
                       <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
                         <li key={i} style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
-                          <Link to={url}>{name}</Link>
+                          <Link to={url}>{t(name)}</Link>
                         </li>
                       </CSSTransition>
                     ))}

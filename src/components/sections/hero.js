@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { email } from '@config';
 import { navDelay, loaderDelay } from '@utils';
 import { usePrefersReducedMotion } from '@hooks';
+import { useTranslation } from 'react-i18next';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -48,6 +49,7 @@ const StyledHeroSection = styled.section`
 const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -58,20 +60,13 @@ const Hero = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const one = <h1>Hi, my name is</h1>;
-  const two = <h2 className="big-heading">Brittany Chiang.</h2>;
-  const three = <h3 className="big-heading">I build things for the web.</h3>;
-  const four = (
-    <p>
-      I'm a Boston-based software engineer who specializes in building (and occasionally designing)
-      exceptional digital experiences. Currently, I'm an engineer at{' '}
-      <a href="https://upstatement.com/">Upstatement</a> focused on building accessible,
-      human-centered products.
-    </p>
-  );
+  const one = <h1>{t('hi')}</h1>;
+  const two = <h2 className="big-heading">Omar Juárez.</h2>;
+  const three = <h3 className="big-heading">{t('presentation')}</h3>;
+  const four = <p>{t('introduction')}</p>;
   const five = (
     <a href={`mailto:${email}`} className="email-link">
-      Get In Touch
+      {t('get-in-touch')}
     </a>
   );
 
