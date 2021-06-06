@@ -1,11 +1,13 @@
 {
-  "about": "About",
+  "about": "About Me",
   "technologies": "Technologies",
   "work": "Work",
   "contact": "Contact",
   "resume": "Resume",
   "hi": "My name is",
   "presentation": "I'm a web developer",
-  "introduction": "I'm electronic and communications engineering, got a great passion about programming and web development, I enjoy learning new IT.",
-  "get-in-touch": "Get In Touch"
+  "introduction": "I'm electronic and communications engineering, got a great passion about programming and web development, I enjoy learning new ITs.",
+  "get-in-touch": "Get In Touch",
+  "about-text-1": "My name is Omar Juárez, since I knew what programming is I've been fascinates about its posibilities. As a web developer I enjoy building web sites from scratch finish.",
+  "about-text-2": "I like the IT sector, because it improves my passion for challenges and problem resolution. The final results gives me the greatest satisfaction."
 }
