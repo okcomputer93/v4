@@ -19,7 +19,7 @@ module.exports = {
     },
     {
       name: 'technologies',
-      url: '/#jobs',
+      url: '/#technologies',
     },
     {
       name: 'work',
@@ -29,6 +29,30 @@ module.exports = {
       name: 'contact',
       url: '/#contact',
     },
+  ],
+
+  technologies: [
+    'PHP',
+    'Laravel',
+    'Node',
+    'Express',
+    'SQL',
+    'NOSQL',
+    'MySQL',
+    'PostgreSQL',
+    'MongoDB',
+    'HTML',
+    'CSS',
+    'SASS',
+    'Tailwind',
+    'Javascript',
+    'Webpack',
+    'Vue',
+    'React',
+    'Vuex',
+    'Pug',
+    'Redux',
+    'Docker',
   ],
 
   colors: {
