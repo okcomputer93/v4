@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next';
 
 const StyledJobsSection = styled.section`
   max-width: 700px;
+  margin-bottom: 100px;
 
   @media (max-width: 700px) {
     margin-bottom: 450px;
@@ -25,7 +26,7 @@ const StyledJobsSection = styled.section`
   }
 `;
 
-const Jobs = () => {
+const Technologies = () => {
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
   const { t } = useTranslation();
@@ -52,4 +53,4 @@ const Jobs = () => {
   );
 };
 
-export default Jobs;
+export default Technologies;

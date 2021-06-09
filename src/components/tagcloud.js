@@ -39,7 +39,7 @@ Tag.propTypes = {
   name: PropTypes.string,
 };
 
-const TagCloud = ({ speed = 0.3, radius = 200, tagName }) => {
+const TagCloud = ({ speed = 0.3, radius = 250, tagName }) => {
   const move = () => {
     const len = tagName.length;
 
@@ -62,8 +62,8 @@ const TagCloud = ({ speed = 0.3, radius = 200, tagName }) => {
     });
   };
 
-  const [angleX, setAngleX] = useState(speed * BASEANGLE);
-  const [angleY, setAngleY] = useState(speed * BASEANGLE);
+  const [angleX] = useState(speed * BASEANGLE);
+  const [angleY] = useState(speed * BASEANGLE);
   const [tags, setTags] = useState(move());
   const prefersReducedMotion = usePrefersReducedMotion();
 
@@ -110,16 +110,6 @@ const TagCloud = ({ speed = 0.3, radius = 200, tagName }) => {
   };
 
   useEffect(() => {
-    document.addEventListener('mousemove', e => {
-      const newAngleX =
-        2 * (e.clientX / document.body.getBoundingClientRect().width - 0.5) * speed * BASEANGLE;
-      const newAngleY =
-        2 * (e.clientY / document.body.getBoundingClientRect().height - 0.5) * speed * BASEANGLE;
-
-      setAngleX(newAngleX);
-      setAngleY(newAngleY);
-    });
-
     if (tagName.length === 0) {
       return;
     }
