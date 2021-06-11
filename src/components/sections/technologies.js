@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 import { srConfig, technologies } from '@config';
 import { loaderDelay } from '@utils';
 import sr from '@utils/sr';
@@ -10,10 +11,10 @@ import { useTranslation } from 'react-i18next';
 
 const StyledJobsSection = styled.section`
   max-width: 700px;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 
   @media (max-width: 700px) {
-    margin-bottom: 450px;
+    margin-bottom: 400px;
   }
 
   .inner {
@@ -29,6 +30,8 @@ const StyledJobsSection = styled.section`
 const Technologies = () => {
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const isMobile = useMediaQuery({ query: '(max-width: 700px)' });
+  const radius = isMobile ? 140 : 200;
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -46,7 +49,7 @@ const Technologies = () => {
       <div className="inner">
         <div>{t('technologies-desc')}</div>
         <CSSTransition classNames="fadeDownClass" timeout={loaderDelay}>
-          <TagCloud tagName={technologies} radius={200}></TagCloud>
+          <TagCloud tagName={technologies} radius={radius}></TagCloud>
         </CSSTransition>
       </div>
     </StyledJobsSection>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { usePrefersReducedMotion } from '@hooks';
 
 // Modified from https://github.com/crazylxr/3d-tag-cloud-for-react
 
@@ -65,7 +64,6 @@ const TagCloud = ({ speed = 0.3, radius = 250, tagName }) => {
   const [angleX] = useState(speed * BASEANGLE);
   const [angleY] = useState(speed * BASEANGLE);
   const [tags, setTags] = useState(move());
-  const prefersReducedMotion = usePrefersReducedMotion();
 
   const containerStyle = {
     width: '100%',
@@ -75,7 +73,7 @@ const TagCloud = ({ speed = 0.3, radius = 250, tagName }) => {
   const wrapperStyle = {
     position: 'relative',
     left: '40%',
-    top: '200px',
+    top: '180px',
   };
 
   const rotateX = () => {
@@ -114,10 +112,6 @@ const TagCloud = ({ speed = 0.3, radius = 250, tagName }) => {
       return;
     }
 
-    if (prefersReducedMotion) {
-      return;
-    }
-
     const animation = () => {
       rotateX();
       rotateY();
@@ -127,8 +121,6 @@ const TagCloud = ({ speed = 0.3, radius = 250, tagName }) => {
     requestAnimationFrame(() => {
       animation();
     });
-
-    return () => cancelAnimationFrame(animation);
   }, []);
 
   return (
