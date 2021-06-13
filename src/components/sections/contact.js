@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 import { srConfig, email } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
@@ -44,6 +45,7 @@ const StyledContactSection = styled.section`
 const Contact = () => {
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const { t } = useTranslation();
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -55,17 +57,14 @@ const Contact = () => {
 
   return (
     <StyledContactSection id="contact" ref={revealContainer}>
-      <h2 className="numbered-heading overline">What’s Next?</h2>
+      <h2 className="numbered-heading overline">{t('whats-next')}</h2>
 
-      <h2 className="title">Get In Touch</h2>
+      <h2 className="title">{t('get-in-touch')}</h2>
 
-      <p>
-        Although I'm not currently looking for any new opportunities, my inbox is always open.
-        Whether you have a question or just want to say hi, I'll try my best to get back to you!
-      </p>
+      <p>{t('contact-desc')}</p>
 
       <a className="email-link" href={`mailto:${email}`}>
-        Say Hello
+        {t('say-hello')}
       </a>
     </StyledContactSection>
   );
