@@ -4,7 +4,7 @@ title: 'Jellypepper Clone'
 github: ''
 external: 'https://jellypepper-clone.netlify.app/'
 tech:
-  - Vanilla Javascript
+  - Javascript
   - HTML
   - SCSS
 company: ''

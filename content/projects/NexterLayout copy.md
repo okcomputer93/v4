@@ -8,6 +8,6 @@ tech:
   - SCSS
 company: ''
 showInProjects: true
-description_en: 'Realtors site layout using SCSS.'
-description_es: 'Layout para agentes inmobiliario utilizando SCSS.'
+description_en: 'Realtors site layout using SCSS & grid system.'
+description_es: 'Layout para agentes inmobiliario utilizando SCSS y grid.'
 ---

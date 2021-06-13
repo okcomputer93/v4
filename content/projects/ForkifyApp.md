@@ -9,6 +9,6 @@ tech:
   - HTML
 company: ''
 showInProjects: true
-description_en: 'Javascript based application, used in Jonas Schmedtmanns Javascript course.'
-description_es: 'Aplicación de Javascript, hecha en el courso de Javascript de Jonas Schmedtmann.'
+description_en: 'Javascript based application, it uses a public API to search and add food recipes. Includes another features like add bookmarks.'
+description_es: 'Aplicación de Javascript, utiliza una API pública para buscar y agregar recetas de cocina. Incluye otras características como agregar recetas favoritos.'
 ---

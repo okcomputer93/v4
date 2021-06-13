@@ -9,5 +9,5 @@ tech:
 company: ''
 showInProjects: true
 description_en: 'Hotel review layout using SCSS.'
-description_es: 'Layout para review de un hotel.'
+description_es: 'Layout para review de un hotel hecho en SCSS.'
 ---
