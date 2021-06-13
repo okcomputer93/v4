@@ -313,8 +313,8 @@ const Featured = () => {
               tech
               github
               external
-              desc_en
-              desc_es
+              description_en
+              description_es
             }
           }
         }
@@ -361,7 +361,7 @@ const Featured = () => {
                     </h3>
 
                     <div className="project-description">
-                      {frontmatter[`desc_${i18n.language}`]}
+                      {frontmatter[`description_${i18n.language}`]}
                     </div>
 
                     {tech.length && (
