@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 import sr from '@utils/sr';
 import { srConfig } from '@config';
 import { Icon } from '@components/icons';
@@ -312,8 +313,9 @@ const Featured = () => {
               tech
               github
               external
+              desc_en
+              desc_es
             }
-            html
           }
         }
       }
@@ -324,6 +326,7 @@ const Featured = () => {
   const revealTitle = useRef(null);
   const revealProjects = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
+  const { i18n, t } = useTranslation();
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -337,13 +340,13 @@ const Featured = () => {
   return (
     <section id="projects">
       <h2 className="numbered-heading" ref={revealTitle}>
-        Some Things I’ve Built
+        {t('projects-done')}
       </h2>
 
       <StyledProjectsGrid>
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
-            const { frontmatter, html } = node;
+            const { frontmatter } = node;
             const { external, title, tech, github, cover } = frontmatter;
             const image = getImage(cover);
 
@@ -351,16 +354,15 @@ const Featured = () => {
               <StyledProject key={i} ref={el => (revealProjects.current[i] = el)}>
                 <div className="project-content">
                   <div>
-                    <p className="project-overline">Featured Project</p>
+                    <p className="project-overline">{t('featured-project')}</p>
 
                     <h3 className="project-title">
                       <a href={external}>{title}</a>
                     </h3>
 
-                    <div
-                      className="project-description"
-                      dangerouslySetInnerHTML={{ __html: html }}
-                    />
+                    <div className="project-description">
+                      {frontmatter[`desc_${i18n.language}`]}
+                    </div>
 
                     {tech.length && (
                       <ul className="project-tech-list">
