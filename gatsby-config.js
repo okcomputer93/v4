@@ -57,6 +57,7 @@ module.exports = {
         path: `${__dirname}/content/projects`,
       },
     },
+
     {
       resolve: `gatsby-transformer-remark`,
       options: {

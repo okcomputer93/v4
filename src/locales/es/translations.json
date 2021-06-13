@@ -1,5 +1,8 @@
 {
   "about": "Acerca de Mí",
+  "show": "Mostrar",
+  "show-more": "Más",
+  "show-less": "Menos",
   "technologies": "Tecnologías",
   "work": "Trabajos",
   "contact": "Contacto",
@@ -11,5 +14,7 @@
   "about-text-1": "Mi nombre es Omar Juárez, desde que conocí la programación me han fascinado sus posibilidades. Como desarrollador web disfruto de la planeación y la implementación de sitios web, desde que surgen como una idea hasta su funcionamiento.",
   "about-text-2": "Me gusta el sector de las tecnologías de la información, pues me permite desarrollar mi pasión por los retos y la resolución de problemas. Los resultados que puedo obtener me dan una gran satisfacción.",
   "technologies-title": "Tecnologías",
-  "technologies-desc": "Algunas tecnologías que he utilizado."
+  "technologies-desc": "Algunas tecnologías que he utilizado.",
+  "projects-title": "Mis Proyectos",
+  "projects-desc": "Proyectos de los que estoy orgulloso"
 }

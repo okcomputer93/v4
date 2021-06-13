@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { Icon } from '@components/icons';
@@ -181,13 +182,15 @@ const Projects = () => {
               tech
               github
               external
+              description_en
+              description_es
             }
-            html
           }
         }
       }
     }
   `);
+  const { i18n, t } = useTranslation();
 
   const [showMore, setShowMore] = useState(false);
   const revealTitle = useRef(null);
@@ -211,8 +214,8 @@ const Projects = () => {
   const projectsToShow = showMore ? projects : firstSix;
 
   const projectInner = node => {
-    const { frontmatter, html } = node;
-    const { github, external, title, tech } = frontmatter;
+    const { frontmatter } = node;
+    const { title, github, external, tech } = frontmatter;
 
     return (
       <div className="project-inner">
@@ -239,7 +242,7 @@ const Projects = () => {
             <a href={external}>{title}</a>
           </h3>
 
-          <div className="project-description" dangerouslySetInnerHTML={{ __html: html }} />
+          <div className="project-description">{frontmatter[`description_${i18n.language}`]}</div>
         </header>
 
         <footer>
@@ -257,11 +260,9 @@ const Projects = () => {
 
   return (
     <StyledProjectsSection>
-      <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
+      <h2 ref={revealTitle}>{t('projects-title')}</h2>
 
-      <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
-        view the archive
-      </Link>
+      <p>{t('projects-desc')}</p>
 
       <ul className="projects-grid">
         {prefersReducedMotion ? (
@@ -295,7 +296,7 @@ const Projects = () => {
       </ul>
 
       <button className="more-button" onClick={() => setShowMore(!showMore)}>
-        Show {showMore ? 'Less' : 'More'}
+        {`${t('show')} ${showMore ? t('show-less') : t('show-more')}`}
       </button>
     </StyledProjectsSection>
   );
