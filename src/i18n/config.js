@@ -8,18 +8,12 @@ i18next
   // detect user language
   // learn more: https://github.com/i18next/i18next-browser-languageDetector
   .use(LanguageDetector)
-  // pass the i18n instan
+  // pass the i18n instance
   .use(initReactI18next)
   .init({
     fallbackLng: 'en',
     resources: {
       es: {
-        translations: require('../locales/es/translations.json'),
-      },
-      'es-ES': {
-        translations: require('../locales/es/translations.json'),
-      },
-      'es-MX': {
         translations: require('../locales/es/translations.json'),
       },
       en: {
@@ -35,6 +29,6 @@ i18next
     },
   });
 
-i18next.languages = ['es', 'es-ES', 'es-MX', 'en'];
+i18next.languages = ['es', 'en'];
 
 export default i18next;
