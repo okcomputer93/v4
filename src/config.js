@@ -53,7 +53,7 @@ module.exports = {
   ],
 
   colors: {
-    green: '#64ffda',
+    green: '#59eff7',
     navy: '#0a192f',
     darkNavy: '#020c1b',
   },
