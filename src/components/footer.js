@@ -48,6 +48,7 @@ const StyledCredit = styled.div`
 
   a {
     padding: 10px;
+    display: block;
   }
 
   .github-stats {
@@ -120,6 +121,9 @@ const Footer = () => {
               </span>
             </div>
           )}
+        </a>
+        <a href="https://github.com/okcomputer93">
+          <div>Modified by Omar Juárez</div>
         </a>
       </StyledCredit>
     </StyledFooter>
