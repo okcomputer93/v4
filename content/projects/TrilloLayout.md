@@ -8,6 +8,6 @@ tech:
   - SCSS
 company: ''
 showInProjects: true
-description_en: 'Hotel review layout using SCSS.'
-description_es: 'Layout para review de un hotel hecho en SCSS.'
+description_en: 'Hotel review layout using SCSS and mostly done using flex.'
+description_es: 'Layout para review de un hotel hecho en SCSS, la mayoría del diseño está hecho usando flex.'
 ---

@@ -1,7 +1,7 @@
 ---
 date: '2020-03-27'
 title: 'Forkify App'
-github: ''
+github: 'https://github.com/okcomputer93/forkify-new-course'
 external: 'https://forkify-okcomputer.netlify.app/'
 tech:
   - Vanilla Javascript
@@ -9,6 +9,6 @@ tech:
   - HTML
 company: ''
 showInProjects: true
-description_en: 'Javascript based application, it uses a public API to search and add food recipes. Includes another features like add bookmarks.'
-description_es: 'Aplicación de Javascript, utiliza una API pública para buscar y agregar recetas de cocina. Incluye otras características como agregar recetas favoritos.'
+description_en: 'Javascript based application, it consumes a public API to search and add food recipes. Includes another features like add bookmarks.'
+description_es: 'Aplicación de Javascript, consume una API pública para buscar y agregar recetas de cocina. Incluye otras características como agregar recetas a favoritos.'
 ---
