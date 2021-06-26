@@ -270,7 +270,7 @@ const Menu = () => {
             )}
 
             <a href="/resume.pdf" className="resume-link">
-              Resume
+              {t('resume')}
             </a>
           </nav>
         </StyledSidebar>
