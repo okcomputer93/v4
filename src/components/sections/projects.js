@@ -226,12 +226,17 @@ const Projects = () => {
             </div>
             <div className="project-links">
               {github && (
-                <a href={github} aria-label="GitHub Link">
+                <a href={github} aria-label="GitHub Link" target="_blank" rel="noreferrer">
                   <Icon name="GitHub" />
                 </a>
               )}
               {external && (
-                <a href={external} aria-label="External Link" className="external">
+                <a
+                  href={external}
+                  aria-label="External Link"
+                  className="external"
+                  target="_blank"
+                  rel="noreferrer">
                   <Icon name="External" />
                 </a>
               )}
@@ -239,7 +244,9 @@ const Projects = () => {
           </div>
 
           <h3 className="project-title">
-            <a href={external}>{title}</a>
+            <a href={external} target="_blank" rel="noreferrer">
+              {title}
+            </a>
           </h3>
 
           <div className="project-description">{frontmatter[`description_${i18n.language}`]}</div>
