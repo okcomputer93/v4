@@ -37,7 +37,7 @@ module.exports = {
     'NodeJS',
     'Express',
     'SQL',
-    'NOSQL',
+    'NoSQL',
     'HTML',
     'CSS',
     'SASS',

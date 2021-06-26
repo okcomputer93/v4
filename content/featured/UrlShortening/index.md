@@ -1,5 +1,5 @@
 ---
-date: '2'
+date: '1'
 title: 'URL Shortening'
 cover: './URLShortening.png'
 github: 'https://github.com/okcomputer93/url-shortening'
