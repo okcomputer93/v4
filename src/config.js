@@ -46,9 +46,7 @@ module.exports = {
     'Webpack',
     'Vue',
     'React',
-    'Vuex',
     'Pug',
-    'Redux',
     'Docker',
   ],
 
