@@ -7,6 +7,7 @@ import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { Icon } from '@components/icons';
 import { usePrefersReducedMotion } from '@hooks';
+import { languageDetected } from '@utils/language';
 
 const StyledProjectsSection = styled.section`
   display: flex;
@@ -191,6 +192,7 @@ const Projects = () => {
     }
   `);
   const { i18n, t } = useTranslation();
+  const language = languageDetected(i18n);
 
   const [showMore, setShowMore] = useState(false);
   const revealTitle = useRef(null);
@@ -249,7 +251,7 @@ const Projects = () => {
             </a>
           </h3>
 
-          <div className="project-description">{frontmatter[`description_${i18n.language}`]}</div>
+          <div className="project-description">{frontmatter[`description_${language}`]}</div>
         </header>
 
         <footer>

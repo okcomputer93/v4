@@ -7,6 +7,7 @@ import sr from '@utils/sr';
 import { srConfig } from '@config';
 import { Icon } from '@components/icons';
 import { usePrefersReducedMotion } from '@hooks';
+import { languageDetected } from '@utils/language';
 
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
@@ -327,6 +328,7 @@ const Featured = () => {
   const revealProjects = useRef([]);
   const prefersReducedMotion = usePrefersReducedMotion();
   const { i18n, t } = useTranslation();
+  const language = languageDetected(i18n);
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -361,7 +363,7 @@ const Featured = () => {
                     </h3>
 
                     <div className="project-description">
-                      {frontmatter[`description_${i18n.language}`]}
+                      {frontmatter[`description_${language}`]}
                     </div>
 
                     {tech.length && (

@@ -23,7 +23,7 @@ i18next
     ns: ['translations'],
     defaultNS: 'translations',
     returnObjects: true,
-    debug: true,
+    debug: process.env.NODE_ENV === 'development',
     interpolation: {
       escapeValue: false, // not needed for react!!
     },
