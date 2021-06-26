@@ -1,5 +1,5 @@
 ---
-date: '2020-03-27'
+date: '2021-01-20'
 title: 'Jellypepper Clone'
 github: 'https://github.com/okcomputer93/jellypepper-clone'
 external: 'https://jellypepper-clone.netlify.app/'

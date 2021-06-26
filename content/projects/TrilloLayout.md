@@ -1,5 +1,5 @@
 ---
-date: '2020-03-27'
+date: '2021-02-11'
 title: 'Trillo Layout'
 github: 'https://github.com/okcomputer93/trillo'
 external: 'https://trillo-okcomputer.netlify.app/'

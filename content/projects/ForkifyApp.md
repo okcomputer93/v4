@@ -1,5 +1,5 @@
 ---
-date: '2020-03-27'
+date: '2020-12-27'
 title: 'Forkify App'
 github: 'https://github.com/okcomputer93/forkify-new-course'
 external: 'https://forkify-okcomputer.netlify.app/'

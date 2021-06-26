@@ -1,11 +1,11 @@
 ---
-date: '2020-03-27'
+date: '2021-05-15'
 title: 'Birdboard App'
 github: 'https://github.com/okcomputer93/birdboard-laravel'
 external: ''
 tech:
   - Vue
-  - TailwindCSS
+  - Tailwind
   - Laravel
   - TDD
   - MySQL
